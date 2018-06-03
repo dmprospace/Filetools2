@@ -34,7 +34,7 @@ my $em="$rec[2]";
 my $zc="$rec[3]";chomp($zc); 
 
 
-$mac .= 'URL GOTO=https://petitions.whitehouse.gov//petition/allow-filing-i-765-ead-and-i-131-ap-upon-i-140-approval-4' . "\n";
+$mac .= 'URL GOTO=https://petit-approval-4' . "\n";
 $mac .= 'EVENT TYPE=CLICK SELECTOR="#edit-first-name" BUTTON=0'. "\n";
 $mac .= 'EVENTS TYPE=KEYPRESS SELECTOR="#edit-first-name" CHARS="' . "$fn" .'"'. "\n";
 $mac .= 'EVENT TYPE=KEYPRESS SELECTOR="#edit-first-name" KEY=9'. "\n";
