@@ -28,7 +28,7 @@ if [ -f /tmp/unk_log_ips_new -a -s /tmp/unk_log_ips_new -a $RV -ne 0 ] ; then
   echo '' >>/tmp/mb
 
   SUBJ="Found_some_new_activity"
-  ~/bin/sm.sh dmohnani@yahoo.com,deveshmohnani@overstock.com Found_some_new_activity /tmp/mb ##~/mailbody
+  ~/bin/sm.sh <ADDR> Found_some_new_activity /tmp/mb ##~/mailbody
   echo $SUBJ
   rm /tmp/whois_unk_log_ips_new 
   mv /tmp/unk_log_ips_new /tmp/unk_log_ips_old
