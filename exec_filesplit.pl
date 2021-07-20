@@ -16,7 +16,7 @@
 #               : 
 # Created by    : Devesh Mohnani
 #               : 
-# Created On    : 2014-08-03 (TD-xxxxx) 
+# Created On    : 2014-08-03
 #               : 
 # Modified      : 
 #               : 
