@@ -29,7 +29,7 @@ else
       echo1 "Mount Failed: EARTH = $RV1  URANUS = $RV2"
       echo1 "exiting 1"
       SUB="Backup_did_not_start_at_`date +%Y%m%d_%T`"
-      $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" $L
+      $HOME/bin/sm.sh 'EMAIL' "$SUB" $L
       exit 1
    fi
 fi
@@ -49,7 +49,7 @@ else
       echo1 "Mount Failed: MARS = $RV1  PLUTO = $RV2"
       echo1 "exiting 1"
       SUB="Backup_did_not_start_at_`date +%Y%m%d_%T`"
-      $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" $L
+      $HOME/bin/sm.sh 'EMAIL' "$SUB" $L
       exit 1
    fi
 fi
@@ -68,5 +68,5 @@ if [ $? != 0 ];then SUB="Failed  /media1/mnt/doc /media4/earth_backup"; $HOME/bi
 #$HOME/bin/make_folder_backup.sh $PLIB /media4/earth_backup/_0_PHOTO_VIDEO_Library $L 2>&1
 if [ $? != 0 ];then SUB="Failed  $PLIB /media4/earth_backup/_0_PHOTO_VIDEO_Library"; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" empty; exit 1; fi;
 SUB="Doc_PLIB_replicated_to_Mars_at_`date +%Y%m%d_%T`"
-$HOME/bin/sm.sh 'dmohnanis@gmail.com' "$SUB" empty
+$HOME/bin/sm.sh 'EMAIL' "$SUB" empty
 ############################################################
