@@ -63,10 +63,10 @@ echo1 "/media3     = pogoplug_uranus"
 env|grep media|sort |tee -a $L
 # Documents backup
 $HOME/bin/make_folder_backup.sh /media1/mnt/doc /media4/earth_backup $L 2>&1
-if [ $? != 0 ];then SUB="Failed  /media1/mnt/doc /media4/earth_backup"; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" empty; exit 1; fi
+if [ $? != 0 ];then SUB="Failed  /media1/mnt/doc /media4/earth_backup"; $HOME/bin/sm.sh 'EMAIL' "$SUB" empty; exit 1; fi
 # Photo backup
 #$HOME/bin/make_folder_backup.sh $PLIB /media4/earth_backup/_0_PHOTO_VIDEO_Library $L 2>&1
-if [ $? != 0 ];then SUB="Failed  $PLIB /media4/earth_backup/_0_PHOTO_VIDEO_Library"; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" empty; exit 1; fi;
+if [ $? != 0 ];then SUB="Failed  $PLIB /media4/earth_backup/_0_PHOTO_VIDEO_Library"; $HOME/bin/sm.sh 'EMAIL' "$SUB" empty; exit 1; fi;
 SUB="Doc_PLIB_replicated_to_Mars_at_`date +%Y%m%d_%T`"
 $HOME/bin/sm.sh 'EMAIL' "$SUB" empty
 ############################################################
