@@ -23,7 +23,7 @@ else
    $HOME/bin/1x_mnt_earth.sh  -M >> $L 2>&1; RV1=$?; $HOME/bin/1x_mnt_uranus.sh -M >> $L 2>&1; RV2=$?
    if [ $RV1 != 0 -o $RV2 != "0" ]; then
       echo1 "Mount Failed: EARTH = $RV1  URANUS = $RV2"; echo1 "exiting 1"
-      SUB="Backup_did_not_start_at_`date +%Y%m%d_%T`" ; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" $L; exit 1
+      SUB="Backup_did_not_start_at_`date +%Y%m%d_%T`" ; $HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" $L; exit 1
    fi
 fi
 ##################### PLUTO SECTION ###########################
@@ -40,7 +40,7 @@ else
    $HOME/bin/1x_mnt_pluto.sh -M >> $L 2>&1; RV2=$?
    if [ $RV1 != 0 -o $RV2 != "0" ]; then
       echo1 "Mount Failed: PLUTO = $RV2"; echo1 "exiting 1"; SUB="Backup_did_not_start_at_`date +%Y%m%d_%T`"
-      $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" $L; exit 1
+      $HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" $L; exit 1
    fi
 fi
 ############### 3. URANUS TO EARTH SYNC PHOTO & VID############
@@ -56,7 +56,7 @@ if [ $RV2 == "0" -a  $RV4 == "0" ];then mv $PNEX/* $PNEX/../P_copy_done/ ; fi
 echo "Moving Dupes to $DUPP" >>$L 2>&1
 for i in `find $PLIB -name *_[0-9][0-9].jpg`; do mv $i $DUPP ; done
 for i in `find $VLIB -name *_[0-9][0-9].mp4`; do mv $i $DUPP ; done
-SUB="Ph_Vid_Move_completed_at_`date +%Y%m%d_%T`" ; $HOME/bin/sm.sh 'dmohnanis@gmail.com' "$SUB" empty
+SUB="Ph_Vid_Move_completed_at_`date +%Y%m%d_%T`" ; $HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" empty
 
 ############# 4. CREATE BACKUP COPY OF EARTH LIBRARY #######
 # 4A. NORMALIZE DOCS
@@ -68,13 +68,13 @@ env|grep media|sort |tee -a $L
 
 # 4B. Documents backup
 $HOME/bin/make_folder_backup.sh /media1/mnt/doc /media5/mnt_sda1/earth_backup_pluto/ $L 2>&1
-if [ $? != 0 ];then SUB="Failed  /media1/mnt/doc /media5/mnt_sda1/earth_backup_pluto/"; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" empty; exit 1; fi
+if [ $? != 0 ];then SUB="Failed  /media1/mnt/doc /media5/mnt_sda1/earth_backup_pluto/"; $HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" empty; exit 1; fi
 
 # 4C. Photo backup
 #$HOME/bin/make_folder_backup.sh $PLIB /media5/mnt_sda1/earth_backup_pluto/_0_PHOTO_VIDEO_Library $L 2>&1
-#if [ $? != 0 ];then SUB="Failed $PLIB /media5/mnt_sda1/earth_backup_pluto/"; $HOME/bin/sm.sh 'dmohnani1@gmail.com' "$SUB" empty; exit 1; fi;
+#if [ $? != 0 ];then SUB="Failed $PLIB /media5/mnt_sda1/earth_backup_pluto/"; $HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" empty; exit 1; fi;
 # all done
 SUB="Doc_PLIB_replicated_to_Pluto_at_`date +%Y%m%d_%T`"
-$HOME/bin/sm.sh 'dmohnanis@gmail.com' "$SUB" empty
+$HOME/bin/sm.sh 'xyzz@gmail.com' "$SUB" empty
 echo1 "Log: $L"
 ###########################################################
