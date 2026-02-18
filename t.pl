@@ -1,6 +1,6 @@
  use MIME::Lite;
     $msg = MIME::Lite->new(
-                 To      =>'dmohnani@yahoo.com',
+                 To      =>'xyzz@yahoo.com',
                  Subject =>'HTML with in-line images!',
                  Type    =>'multipart/related'
                  );
