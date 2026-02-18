@@ -54,7 +54,7 @@ L1=`basename $L`
 echo "<HTML><TABLE BORDER=2>" > /tmp/$L1
 sed -e 's/^/<TR><TD>/g' $L|sed -e 's/$/<\/TD><\/TR>/g' >> /tmp/$L1
 echo "</TABLE></HTML>" >> /tmp/$L1
-$HOME/bin/sm.sh 'dmohnani@yahoo.com' "${MS}_Backup" /tmp/$L1
+$HOME/bin/sm.sh 'xyzz@yahoo.com' "${MS}_Backup" /tmp/$L1
 
 rm /tmp/$L1
 
